@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Little Lemon restaurant website clone">
+  <title>Little Lemon | Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Markazi+Text:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home" aria-label="Little Lemon home">
+      <span class="brand-mark">🍋</span><span>LITTLE LEMON</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a>
+      <a href="#booking">Reservations</a><a href="#order">Order Online</a>
+      <button class="cart-button" id="cartButton" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">CHICAGO · MEDITERRANEAN</p>
+        <h1>Little Lemon</h1>
+        <h2>Fresh flavors, sunny moments.</h2>
+        <p>We are a family-owned Mediterranean restaurant focused on traditional recipes with a modern twist. Come enjoy delicious food, warm hospitality, and a table made for memories.</p>
+        <a class="btn primary" href="#booking">Reserve a Table</a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-dish">🥗</div>
+        <div><strong>Today's special</strong><span>Greek salad · $12.99</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="specials section" id="menu">
+    <div class="section-head"><div><p class="eyebrow">OUR MENU</p><h2>This week's specials</h2></div><button class="btn secondary" id="viewMenu">View full menu</button></div>
+    <div class="cards" id="menuCards"></div>
+  </section>
+
+  <section class="booking section" id="booking">
+    <div class="booking-copy"><p class="eyebrow">BOOK A TABLE</p><h2>Reserve your table</h2><p>Choose your date, time and party size. Your reservation is stored locally so you can test the complete experience without a backend.</p></div>
+    <form class="booking-form" id="bookingForm">
+      <label>Date<input id="date" type="date" required></label>
+      <label>Time<select id="time" required><option value="">Select a time</option><option>17:00</option><option>18:00</option><option>19:00</option><option>20:00</option><option>21:00</option></select></label>
+      <label>Guests<select id="guests" required><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></label>
+      <label>Occasion<select id="occasion"><option>Birthday</option><option>Anniversary</option><option>Family dinner</option><option>Casual</option></select></label>
+      <button class="btn primary" type="submit">Confirm reservation</button>
+    </form>
+  </section>
+
+  <section class="testimonials section">
+    <div class="section-head"><div><p class="eyebrow">GUESTS LOVE US</p><h2>What our customers say</h2></div></div>
+    <div class="reviews">
+      <article><div class="stars">★★★★★</div><p>“The food was bright, fresh and absolutely delicious. The service made the evening feel special.”</p><strong>— Priya R.</strong></article>
+      <article><div class="stars">★★★★★</div><p>“A beautiful little restaurant with generous portions and wonderful Mediterranean flavors.”</p><strong>— Daniel M.</strong></article>
+      <article><div class="stars">★★★★★</div><p>“Booking was easy and the lemon dessert was unforgettable!”</p><strong>— Sofia K.</strong></article>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div><p class="eyebrow">OUR STORY</p><h2>Little Lemon, big heart.</h2><p>Little Lemon was founded by two brothers who wanted to bring the Mediterranean flavors of their childhood to Chicago. Our kitchen blends family recipes, seasonal ingredients and contemporary presentation.</p><p>Every dish is made with care, from our crisp salads to our handmade pasta and signature desserts.</p></div>
+    <div class="about-images"><div>🍋</div><div>🍝</div></div>
+  </section>
+
+  <section class="order section" id="order">
+    <div class="order-banner"><div><p class="eyebrow">TAKE IT HOME</p><h2>Order online</h2><p>Choose your favorites and build your basket in seconds.</p></div><button class="btn primary" id="orderNow">Start an order</button></div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-logo">🍋 LITTLE LEMON</div><p>Chicago · Mediterranean · Family owned</p></div>
+    <div><strong>Navigation</strong><a href="#home">Home</a><a href="#menu">Menu</a><a href="#booking">Reservations</a></div>
+    <div><strong>Contact</strong><span>123 Lemon Street</span><span>Chicago, IL</span><span>(312) 555-0123</span></div>
+    <div><strong>Follow</strong><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a></div>
+  </div>
+  <div class="copyright">© 2026 Little Lemon. Demo website.</div>
+</footer>
+
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true">
+  <div class="modal-box"><button class="close" id="closeModal">×</button><div id="modalContent"></div></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
